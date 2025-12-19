@@ -3,9 +3,11 @@
 Reflected XSS in User-Agent on https://vn.trip.com/
 
 I.	  Summary
--	The application reflects the User-Agent HTTP header directly into the HTML response without proper sanitization, allowing an attacker to execute arbitrary JavaScript in the victim’s browser. 
+-	The application reflects the User-Agent HTTP header directly into the HTML response without proper sanitization, allowing an attacker to execute arbitrary JavaScript in the victim’s browser.
+   
 II.	Affected Endpoint
 -	GET https://vn.trip.com/?locale=vi-VN&curr=VND
+  
 III.	Steps to Reproduce
 1.	Send an HTTP request to the following endpoint with a malicious payload  appended to the end of the existing User-Agent value:
 2.	GET /?locale=vi-VN&curr=VND HTTP/2
@@ -24,6 +26,6 @@ IV.	Proof of Concept
 
 -	Observe that the JavaScript payload is executed and an alert dialog is displayed in browser
   ![Burp Request](images/Observe-reponse-in-Browser-1.png)
-  ![Burp Request](images/Observe-reponse-in-Browser-1.png)
+  ![Burp Request](images/Observe-reponse-in-Browser-2.png)
  
  
