@@ -1,6 +1,7 @@
 # Reflected-XSS-in-TRIP-com
 
 Reflected XSS in User-Agent on https://vn.trip.com/
+
 I.	  Summary
 -	The application reflects the User-Agent HTTP header directly into the HTML response without proper sanitization, allowing an attacker to execute arbitrary JavaScript in the victim’s browser. 
 II.	Affected Endpoint
